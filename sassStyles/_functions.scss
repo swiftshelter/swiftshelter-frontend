@@ -1,1 +1,12 @@
+// functions.scss
 
+// Function to calculate the width based on a percentage of the container width
+@function calculate-width($percentage) {
+    @return $percentage * 1vw; // Adjust the calculation as needed
+  }
+  
+  // Function to generate a color with increased brightness
+  @function lighten-color($color, $amount) {
+    @return lighten($color, $amount);
+  }
+  
