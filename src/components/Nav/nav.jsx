@@ -3,6 +3,7 @@ import { useState } from "react";
 import keyIcon from "../../assets/images/1-nav/house-key-icon.svg";
 import userAvatar from "../../assets/images/1-nav/user-avatar.svg";
 import "./nav.scss";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -34,10 +35,12 @@ const Nav = () => {
         &equiv;
       </span>
 
-      <figure className="brand-image-container">
-        <img className="brand-image" src={keyIcon} alt="" />
-        <span className="brand-name">swiftshelter</span>
-      </figure>
+        <Link to="/">
+        <figure className="brand-image-container">
+          <img className="brand-image" src={keyIcon} alt="" />
+          <span className="brand-name">swiftshelter</span>
+        </figure>
+        </Link>
 
       <NavList navList={navList} />
 

@@ -1,4 +1,4 @@
-@import './_variables.scss';
+// @import './_variables.scss';
 
 .card{
   background: #FFFFFF;
@@ -214,4 +214,8 @@ footer{
       }
     }
   }
+}
+
+.x-spacing{
+  padding: 30px 0;
 }
