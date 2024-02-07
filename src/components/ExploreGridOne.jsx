@@ -22,7 +22,7 @@ const ExploreGridOne = () => {
                 <div className="card-body">
                   <p className='apartment'>{card?.cardName}</p>
                   <div>
-                    <h3>${card.priceFro} - ${card.priceTo}</h3>
+                    <h3>₦{card.priceFro} - ₦{card.priceTo}</h3>
                     <div>
                     <span className='bed-bath'>
                       {card?.bed}

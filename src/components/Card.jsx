@@ -14,7 +14,7 @@ const Card = ({card}) => {
     <div className="card-body">
       <p className='apartment'>{card?.cardName}</p>
       <div>
-        <h3>${card.price}</h3>
+        <h3>₦{card.price}</h3>
         <div><span>{card?.propDescription}</span>{card?.path || exploreCard?.path} <span>{card?.measurement || exploreCard?.measurement}</span>{card?.area || exploreCard?.area}</div>
         <p>{card?.location}</p>
       </div>
