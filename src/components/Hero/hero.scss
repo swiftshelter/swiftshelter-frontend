@@ -1,6 +1,8 @@
 /* HERO SECTION */
 .hero {
-  background-image: url("../../assets/images/2-hero/hero-bg-image.png");
+  background-image: url("../../assets/images/2-hero/pexels-home-image.jpg");
+  background-color: rgba(0, 0, 0, 0.7);
+  background-blend-mode: darken;
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -86,6 +88,10 @@
   outline: 1px solid rgb(var(--light-grey));
   border-radius: 20px;
 }
+.hero__input-field::placeholder {
+  color: rgb(59, 57, 57); // making the placeholder text moore visible
+}
+
 .search-btn {
   border: transparent;
   transition: var(--transition);
@@ -107,10 +113,6 @@
 @media screen and (min-width: 900px) {
   .hero__list {
     font-size: var(--font-small);
-  }
-
-  .hero {
-    background-image: url("../../assets/images/2-hero/hero-rent-desktop-xl.webp.png");
   }
   .hero__footer {
     justify-content: center;

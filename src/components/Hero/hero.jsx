@@ -1,18 +1,30 @@
 import searchBtn from "../../assets/images/2-hero/search-btn.svg";
 import "./hero.scss";
 const Hero = () => {
+  // Defining the list items
+  const listItems = [
+    "Buy",
+    "Rent",
+    "Sell",
+    "Pre-approval",
+    "Just Sold",
+    "Home Value",
+  ];
+
   return (
     <section className="hero">
       <h1 className="hero__header">Discover your perfect rental</h1>
       <div>
-        <ul className="hero__list">
-          <li className="hero__list-item">Buy</li>
-          <li className="hero__list-item">Rent</li>
-          <li className="hero__list-item">Sell</li>
-          <li className="hero__list-item">Pre-approval</li>
-          <li className="hero__list-item">Just Sold</li>
-          <li className="hero__list-item">Home Value</li>
-        </ul>
+        {/* Render the list items conditionally */}
+        {listItems.length > 0 && (
+          <ul className="hero__list">
+            {listItems.map((item, index) => (
+              <li key={index} tabIndex={0} className="hero__list-item">
+                {item}
+              </li>
+            ))}
+          </ul>
+        )}
         <div className="hero_input-container">
           <input
             className="hero__input-field"

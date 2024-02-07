@@ -35,17 +35,17 @@ const Nav = () => {
         &equiv;
       </span>
 
-        <Link to="/">
+      <Link to="/">
         <figure className="brand-image-container">
           <img className="brand-image" src={keyIcon} alt="" />
           <span className="brand-name">swiftshelter</span>
         </figure>
-        </Link>
+      </Link>
 
       <NavList navList={navList} />
 
       <div className="user-profile-image">
-        <img src={userAvatar} alt="user image" />
+        <img src={userAvatar} alt="user image" tabIndex={0} />
       </div>
     </nav>
   );
