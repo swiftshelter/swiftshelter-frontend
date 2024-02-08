@@ -1,42 +1,59 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;400;500;700&display=swap");
+
+/* global variables */
+:root {
+  --font-ultra-small: 1rem;
+  --font-extra-small: 1.5rem;
+  --font-small: 2rem;
+  --font-medium: 3rem;
+  --font-large: 5rem;
+
+  /* colors */
+  --soft-red: 358, 73%, 49%;
+  --white: 0, 100%, 100%;
+  --light-grey: 192, 188, 188;
+  --border-radius-10: 10px;
+
+  /* TRANSITION */
+  --transition: all 300ms ease-in-out;
+}
+/* utility class */
+.font-thin {
+  font-weight: 100;
+}
+.font-bold {
+  font-weight: 700;
+}
+.mb-5 {
+  margin-bottom: 5px;
+}
+.display-block {
+  display: block;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+/* general styles */
+html {
+  font-size: 62.5%;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+body {
+  font-family: "Inter", sans-serif;
 }
-
-.card {
-  padding: 2em;
+li {
+  list-style-type: none;
 }
-
-.read-the-docs {
-  color: #888;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+input,
+button {
+  font: inherit;
 }
