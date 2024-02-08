@@ -5,7 +5,7 @@ import userAvatar from "../../assets/images/1-nav/user-avatar.svg";
 import "./nav.scss";
 import { Link } from "react-router-dom";
 
-const Nav = () => {
+const Nav = ({handleVisiblity}) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleNavVisiblity = () => {
@@ -13,7 +13,7 @@ const Nav = () => {
   };
 
   // conditional rendering of the navigation list items
-  const navList = ["Buy", "Sell", "Rent", "Find Home Owners", "Login"];
+  const navList = ["Buy", "Sell", "Rent", "Find Home Owners"];
   const NavList = ({ navList }) => {
     return (
       <ul className={`nav__list ${isVisible && "nav__list-visible"}`}>
@@ -22,8 +22,11 @@ const Nav = () => {
             <a href="">{listitem}</a>
           </li>
         ))}
-        <button className=" signup-button">
-          <a href="">Sign Up</a>
+        <button onClick={handleVisiblity} className=" login">
+          Login
+        </button>
+        <button onClick={handleVisiblity} className=" signup-button">
+          Sign Up
         </button>
       </ul>
     );

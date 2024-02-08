@@ -63,7 +63,14 @@
   top: 7rem;
   max-height: 100vh;
 }
-
+.login{
+  outline: none;
+  border: none;
+  background: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+  
+}
 .signup-button {
   border-color: transparent;
   background: grey;
