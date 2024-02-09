@@ -1,5 +1,3 @@
-// added tabIndex to make this section navigable with keyboard
-
 import React from "react";
 import Facebook from "../assets/svg/fb.svg";
 import X from "../assets/svg/x.svg";
@@ -10,43 +8,54 @@ import Youtube from "../assets/svg/youtube.svg";
 import Google from "../assets/svg/playstore-badge.svg";
 import Apple from "../assets/svg/appstore-badge.svg";
 
-const Footer = () => {
-  // dynamically render the social links elements
-  const socialLinksArray = [
-    Facebook,
-    X,
-    Linkedin,
-    Instagram,
-    Pintrest,
-    Youtube,
-  ];
-  const SocialLinks = () => {
-    return (
-      <div className="social-icons-container">
-        {socialLinksArray.map((element, index) => (
-          <a key={index} className="icon" href="#" tabIndex="0">
-            <img src={element} alt={element} />
-          </a>
-        ))}
-      </div>
-    );
-  };
+// social links component
+// dynamically render the social links elements
+const socialLinksArray = [Facebook, X, Linkedin, Instagram, Pintrest, Youtube];
+const SocialLinks = () => {
+  return (
+    <div className="social-icons-container">
+      {socialLinksArray.map((element, index) => (
+        <a key={index} className="icon" href="#" tabIndex="0">
+          <img src={element} alt={element} />
+        </a>
+      ))}
+    </div>
+  );
+};
 
+// footer Navlinks component
+const footerNavList = [
+  "About us",
+  "Careers",
+  "Accessibilities",
+  "Feedback",
+  "Terms",
+  "Tech Blog",
+  "Agent Blog",
+];
+
+const FooterNav = () => {
+  return (
+    <nav>
+      <ul>
+        {footerNavList.map((listItem, index) => {
+          return (
+            <li key={index} tabIndex="0">
+              {listItem}
+            </li>
+          );
+        })}
+      </ul>
+    </nav>
+  );
+};
+
+// main footer component
+const Footer = () => {
   return (
     <footer>
       <SocialLinks />
-      <nav>
-        <ul>
-          <li tabIndex="0">About us</li>
-          <li tabIndex="0">Careers</li>
-          <li tabIndex="0">Accessibilities</li>
-          <li tabIndex="0">Feedback</li>
-          <li tabIndex="0">Terms</li>
-          <li tabIndex="0">Tech Blog</li>
-          <li tabIndex="0">Agent Blog</li>
-        </ul>
-      </nav>
-
+      <FooterNav />
       <section className="get-app">
         <p>Get the app (coming soon...)</p>
         <figure className="get-app__icons">
@@ -69,5 +78,4 @@ const Footer = () => {
     </footer>
   );
 };
-
 export default Footer;
