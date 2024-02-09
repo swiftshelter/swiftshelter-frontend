@@ -16,7 +16,7 @@ const Home = () => {
   }
   return (
     <div className='home'>
-      <div className={showForm ? "hiddepop" : "user-auth"}>
+      <div className={!showForm ? "hiddepop" : "user-auth"}>
         <UserAuth showForm={showForm} handleVisiblity={handleVisiblity} />
       </div>
       <Nav handleVisiblity={handleVisiblity}/>

@@ -1,12 +1,14 @@
 import React from 'react'
+import { FaTimes } from "react-icons/fa";
+import Google from '../assets/images/google-icon.png'
 
 const UserAuth = ({showForm,handleVisiblity}) => {
   return (
     <div className='user-signin-signup'>
-       <div className="sigmin-signup">
+       <div className="signin-signup">
         <div className="heading">
             <h2>Log in or create an account</h2>
-            <p onClick={handleVisiblity}>X</p>
+            <p onClick={handleVisiblity}><FaTimes/></p>
         </div>
             <form action="">
                 <div className='validation'>
@@ -19,7 +21,7 @@ const UserAuth = ({showForm,handleVisiblity}) => {
             <div className="divider-wrapper">
                 <div className='divider'></div> <span>or</span>  <div className='divider'></div>
             </div>
-            <button><img src="" alt="" /><span>Continue with google</span></button>
+            <button><img src={Google} alt="google" /><span>Continue with google</span></button>
         <div className="csignin-signup-footer">
          <h2>Are you in need of house or want to sell one?</h2>
          <p>Login or create an account here</p>

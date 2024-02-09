@@ -1,7 +1,7 @@
 /* HERO SECTION */
 .hero {
   background-image: url("../../assets/images/2-hero/pexels-home-image.jpg");
-  background-color: rgba(0, 0, 0, 0.452);
+  background-color: rgba(0, 0, 0, 0.464);
   background-blend-mode: darken;
   background-repeat: no-repeat;
   background-position: center center;
@@ -27,7 +27,7 @@
   display: flex;
   justify-content: space-evenly;
   gap: var(--gap, 1rem);
-margin-top: -7rem;
+  margin-top: -7rem;
   margin-block-end: 1rem;
 }
 .hero__list-item {
@@ -72,6 +72,10 @@ margin-top: -7rem;
   padding: 0.9rem;
   padding-inline-start: 0.5rem;
   border-radius: 20px;
+  
+  @media screen and (max-width: 600px) {
+    padding: 0.5rem;
+  }
 }
 
 .hero__input-field {
