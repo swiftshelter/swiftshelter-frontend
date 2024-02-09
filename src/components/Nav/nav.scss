@@ -22,7 +22,6 @@
 }
 .nav__toggle-icon:hover {
   opacity: 0.5;
-  transform: rotate(45deg);
 }
 
 .nav__list-item {
@@ -63,13 +62,12 @@
   top: 7rem;
   max-height: 100vh;
 }
-.login{
+.login {
   outline: none;
   border: none;
   background: none;
   font-size: 1.6rem;
   cursor: pointer;
-  
 }
 .signup-button {
   border-color: transparent;

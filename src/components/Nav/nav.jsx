@@ -5,7 +5,7 @@ import userAvatar from "../../assets/images/1-nav/user-avatar.svg";
 import "./nav.scss";
 import { Link } from "react-router-dom";
 
-const Nav = ({handleVisiblity}) => {
+const Nav = ({ handleVisiblity }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleNavVisiblity = () => {
@@ -34,8 +34,9 @@ const Nav = ({handleVisiblity}) => {
 
   return (
     <nav className="nav">
+      {/* the nav-toggler icon should change based on the state */}
       <span onClick={handleNavVisiblity} className="nav__toggle-icon">
-        &equiv;
+        {isVisible ? <>&times;</> : <>&equiv;</>}
       </span>
 
       <Link to="/">
@@ -47,9 +48,9 @@ const Nav = ({handleVisiblity}) => {
 
       <NavList navList={navList} />
 
-      <div className="user-profile-image">
+      <figure className="user-profile-image">
         <img src={userAvatar} alt="user image" tabIndex={0} />
-      </div>
+      </figure>
     </nav>
   );
 };
