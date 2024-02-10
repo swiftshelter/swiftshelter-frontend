@@ -1,11 +1,11 @@
 // import images
 import { useState } from "react";
-import keyIcon from "../../assets/images/1-nav/house-key-icon.svg";
+import brandIcon from "../../assets/images/1-nav/house-key-icon.svg";
 import userAvatar from "../../assets/images/1-nav/user-avatar.svg";
 import "./nav.scss";
 import { Link } from "react-router-dom";
 
-const Nav = ({handleVisiblity}) => {
+const Nav = ({ handleVisiblity }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   const handleNavVisiblity = () => {
@@ -22,7 +22,7 @@ const Nav = ({handleVisiblity}) => {
             <a href="">{listitem}</a>
           </li>
         ))}
-        <button onClick={handleVisiblity} className=" login">
+        <button onClick={handleVisiblity} className="login-button">
           Login
         </button>
         <button onClick={handleVisiblity} className=" signup-button">
@@ -34,22 +34,23 @@ const Nav = ({handleVisiblity}) => {
 
   return (
     <nav className="nav">
+      {/* the nav-toggler icon should change based on `isVisible` state variable */}
       <span onClick={handleNavVisiblity} className="nav__toggle-icon">
-        &equiv;
+        {isVisible ? <>&times;</> : <>&equiv;</>}
       </span>
 
       <Link to="/">
         <figure className="brand-image-container">
-          <img className="brand-image" src={keyIcon} alt="" />
+          <img className="brand-image" src={brandIcon} alt="" />
           <span className="brand-name">swiftshelter</span>
         </figure>
       </Link>
 
       <NavList navList={navList} />
 
-      <div className="user-profile-image">
+      <figure className="user-profile-image">
         <img src={userAvatar} alt="user image" tabIndex={0} />
-      </div>
+      </figure>
     </nav>
   );
 };

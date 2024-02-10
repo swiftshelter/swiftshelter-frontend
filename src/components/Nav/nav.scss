@@ -22,7 +22,6 @@
 }
 .nav__toggle-icon:hover {
   opacity: 0.5;
-  transform: rotate(45deg);
 }
 
 .nav__list-item {
@@ -32,10 +31,9 @@
   margin: 1rem 2rem;
   transition: var(--transition);
   &:hover {
-    border-bottom: 1px solid rgb(59, 57, 57);
+    border-bottom: 1px solid black;
     cursor: pointer;
-    color: rgb(var(--light-grey));
-    //padding-inline-start: 1rem;
+    opacity: 0.7;
   }
 }
 
@@ -63,14 +61,19 @@
   top: 7rem;
   max-height: 100vh;
 }
-.login{
+.login-button {
   outline: none;
   border: none;
   background: none;
   font-size: 1.6rem;
   cursor: pointer;
-  
+  transition: var(--transition);
+
+  &:hover {
+    opacity: 0.7;
+  }
 }
+
 .signup-button {
   border-color: transparent;
   background: grey;
@@ -82,9 +85,10 @@
   transition: var(--transition);
   cursor: pointer;
   padding-inline-start: 1rem;
-}
-.signup-button:hover {
-  background: rgb(var(--light-grey));
+
+  &:hover {
+    background: rgb(var(--light-grey));
+  }
 }
 
 .brand-image-container {

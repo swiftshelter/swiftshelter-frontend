@@ -13,7 +13,7 @@ const Hero = () => {
 
   return (
     <section className="hero">
-      <h1 className="hero__header">Discover your perfect rental</h1>
+      <h1 className="hero__header-text">Discover your perfect rental</h1>
       <div>
         {/* Render the list items conditionally */}
         {listItems.length > 0 && (

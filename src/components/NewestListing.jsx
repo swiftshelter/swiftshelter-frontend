@@ -1,25 +1,25 @@
-import React from 'react'
-import Card from './Card'
-import { cards } from './../../lib/data';
+import React from "react";
+import Card from "./Card";
+import { cards } from "./../../lib/data";
 
-const NewestListings = ({handleVisibility}) => {
+const NewestListings = ({ handleVisibility }) => {
   return (
-    <div className='newestlistings'>
-      <div>
-      <h1 onClick={handleVisibility}>Newest listings</h1>
-      <p>See the most up-to-date listings</p>
-      </div>
+    <section className="newestlistings">
+      <header>
+        <h1 onClick={handleVisibility}>Newest listings</h1>
+        <p>See the most up-to-date listings</p>
+      </header>
       <div className="card-container">
-        {cards.newestListingData?.map((card)=>{
-          return(
-            <div key={card.id}>
-            <Card card={card} key={card?.id}/>
-            </div >
-          )
+        {cards.newestListingData?.map((card) => {
+          return (
+            <section key={card.id}>
+              <Card card={card} key={card?.id} />
+            </section>
+          );
         })}
       </div>
-    </div>
-  )
-}
+    </section>
+  );
+};
 
-export default NewestListings
+export default NewestListings;
