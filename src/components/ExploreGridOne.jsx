@@ -16,9 +16,9 @@ const ExploreGridOne = () => {
           </p>
         </div>
         <div className="card-container">
-          {cards.rentSpecialData?.map((card) => {
+          {cards.rentSpecialData?.map((card, index) => {
             return (
-              <div key={card.id} className="card">
+              <div key={index} className="card">
                 <div className="card-img">
                   <img src={card?.icon} alt="" />
                   <img src={card?.img} alt="" />

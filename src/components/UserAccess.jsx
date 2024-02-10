@@ -4,18 +4,17 @@ import Google from "../assets/images/google-icon.png";
 
 const UserAuth = ({ showForm, handleVisiblity }) => {
   return (
-    <div className="user-signin-signup">
+    <section className="user-signin-signup">
       <div className="signin-signup">
         <div className="heading">
           <h2>Log in or create an account</h2>
           <p onClick={handleVisiblity}>&times;{/* <FaTimes /> */}</p>
         </div>
         <form action="">
-          <div className="validation">
-            <p>Email Address</p>
-            <p>required</p>
-          </div>
-          <input type="email" placeholder="Enter your email" />
+          <label className="input-field-label" htmlFor="email">
+            Email Address (required)
+          </label>
+          <input id="email" type="email" placeholder="swiftshelter@gmail.com" />
           <button>Continue</button>
         </form>
         <div className="divider-wrapper">
@@ -28,14 +27,23 @@ const UserAuth = ({ showForm, handleVisiblity }) => {
         </button>
         <div className="csignin-signup-footer">
           <h2>Are you in need of house or want to sell one?</h2>
-          <p>Login or create an account here</p>
+          <p>
+            <a href="#">Login or create an account here</a>
+          </p>
         </div>
 
         <p className="privacy-policy">
-          By creating an account you agree to terms of use and privacy policy
+          <input
+            type="checkbox"
+            name="agreement-checkbox"
+            id="agreement-checkbox"
+          />
+          <span>
+            By creating an account you agree to terms of use and privacy policy
+          </span>
         </p>
       </div>
-    </div>
+    </section>
   );
 };
 
